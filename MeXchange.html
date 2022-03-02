@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Calculate live currency and foreign exchange rates with the free Currency Converter. We specialize in money changer, currency exchange ..."
+    />
+    <title>MeXchange</title>
+    <link rel="icon" href="images/companylogo.webp" />
+    <link rel="stylesheet" href="css/header-and-footer.css" type="text/css" />
+    <link rel="stylesheet" href="css/content-1.css" type="text/css" />
+    <link rel="stylesheet" href="css/content-2.css" type="text/css" />
+    <link rel="stylesheet" href="css/content-3.css" type="text/css" />
+    <link rel="stylesheet" href="css/content-4.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+    />
+    <!-- Icons imported from Fontawesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="scrollTop"><span>Scroll To Top</span> <span>&#11165;</span></div>
+    <div class="header">
+      <a href="./index.html"
+        ><div class="logo">
+          <img
+            id="header-company-logo"
+            src="images/companylogo.webp"
+            alt="company logo"
+          />
+          <span class="header-logo-name">MeXchange</span>
+        </div></a
+      >
+      <div id="google_translate_element"></div>
+      <ul class="navlist">
+        <li id="nav-about">
+          <i
+            class="fas fa-question-circle"
+            style="font-size: 24px; vertical-align: top"
+          ></i
+          >About Us
+        </li>
+        <li id="nav-notes">
+          <i class="fas fa-money-bill-wave-alt" style="font-size: 24px"></i
+          >Country Notes
+        </li>
+        <li id="nav-rates">
+          <i class="fas fa-chart-line" style="font-size: 24px"></i>Exchange
+          Rates
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="left">
+        <div class="text">
+          <h1>Know your money</h1>
+          <p>
+            You never know when you really need
+            <span style="color: #000; font-size: 110%">every single cent</span
+            >.<br /><br />We understand your financial frustrations, that's why
+            here's a<br /><span style="color: #4757b1">one stop solution </span
+            >that protects both you and your wallet.
+          </p>
+        </div>
+      </div>
+      <div class="right">
+        <form class="calculator-ctn" action="#">
+          <div class="main-panel">
+            <p>*Data retrieved from ExchangeRate-API</p>
+            <div class="display-ctn">
+              <div class="display-conversion"></div>
+              <p class="display-rate"></p>
+            </div>
+          </div>
+          <div class="bottom-panel">
+            <div class="fromNto">
+              <div class="from-ctn">
+                <p>FROM</p>
+                <div class="from">
+                  <div class="dropdown dropdown1">
+                    <img src="images/MYsmall.webp" alt="flag" />
+                    <select>
+                      <!-- Left Drop-Down List (From) -->
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+              <div class="to-ctn">
+                <p>TO</p>
+                <div class="to">
+                  <div class="dropdown dropdown2">
+                    <img src="images/USsmall.webp" alt="flag" />
+                    <select>
+                      <!-- Left Drop-Down List (From) -->
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <input
+                type="number"
+                onfocus="this.value=''"
+                min="1"
+                placeholder="Enter your amount..."
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="content-2">
+      <div class="top-section">
+        <div class="text2">
+          <h1>Exchange Rates</h1>
+          <p>
+            We offer <span style="color: #acfdce">better</span> rates compared
+            to other competitors in the market
+          </p>
+        </div>
+        <div class="fromNtoCtn">
+          <div class="fromNto2">
+            <div class="from-ctn2">
+              <p>FROM</p>
+              <div class="from2">
+                <div class="dropdown-2">
+                  <img src="images/USsmall.webp" alt="flag" />
+                  <select>
+                    <!-- Left Drop-Down List (From) -->
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="icon2"><i class="fas fa-exchange-alt"></i></div>
+            <div class="to-ctn2">
+              <p>TO</p>
+              <div class="to2">
+                <div class="dropdown-2">
+                  <img src="images/MYsmall.webp" alt="flag" />
+                  <select>
+                    <!-- Left Drop-Down List (From) -->
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-section"></div>
+    </div>
+    <section class="content-3">
+      <div class="text-3">
+        <h1>Country Notes</h1>
+        <p>Take a look at the physical bank notes of each currency</p>
+      </div>
+      <div class="country-flags">
+        <ul id="flag-list">
+          <li id="flag-list__my">
+            <span>MYR</span>
+            <img src="images/malaysia.webp" alt="malaysia flag" />
+          </li>
+          <li id="flag-list__cn">
+            <span>CNY</span> <img src="images/china.webp" alt="china flag" />
+          </li>
+          <li id="flag-list__us">
+            <span>USD</span> <img src="images/us.webp" alt="US flag" />
+          </li>
+          <li id="flag-list__sg">
+            <span>SGD</span> <img src="images/sg.webp" alt="singapore flag" />
+          </li>
+          <li id="flag-list__jp">
+            <span>JPY</span> <img src="images/japan.webp" alt="japan flag" />
+          </li>
+        </ul>
+      </div>
+      <div id="modal">
+        <div id="modal__close-btn">
+          <i class="fas fa-times"></i>
+          <p>Close</p>
+        </div>
+        <div id="modal__country-notes">
+          <img id="modal__img" src="images/japan.webp" alt="Japan flag" />
+          <p id="modal__text"></p>
+        </div>
+      </div>
+    </section>
+    <section class="content-4">
+      <div class="inner-background-layout">
+        <div class="text-card-boxes">
+          <img src="images/companylogo.webp" alt="Company Logo" height="100" />
+          <h4>One stop, Protecting you and your money.</h4>
+        </div>
+        <!--Card-Box 1-->
+        <div class="text-card-boxes bg-dark">
+          <div class="flex-container">
+            <div class="aboutus-icon">
+              <img
+                src="images/data-protection.webp"
+                alt="Icon of data protection in cloud"
+                height="80"
+              />
+            </div>
+            <div class="heading"><h5>Data protection</h5></div>
+          </div>
+          <div class="aboutus-text">
+            <p>
+              We’re committed to keeping your personal data safe, and we’re
+              transparent in how we collect, process, and store it.
+            </p>
+            <a
+              href="csp/coming-soon.html"
+              target="_blank"
+              aria-label="Text-Link"
+              class="text-link"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <!--Card-Box 2-->
+        <div class="text-card-boxes bg-dark">
+          <div class="flex-container">
+            <div class="aboutus-icon">
+              <img
+                src="images/fraud-alert.webp"
+                alt="Fraud protection icon"
+                height="80"
+              />
+            </div>
+            <div class="heading"><h5>Dedicated anti-fraud team</h5></div>
+          </div>
+          <div class="aboutus-text">
+            <p>
+              We work round the clock to keep your account and money protected
+              from even the most sophisticated fraud.
+            </p>
+            <a
+              href="csp/coming-soon.html"
+              target="_blank"
+              aria-label="Text-Link"
+              class="text-link"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <!--Card-Box 3-->
+        <div class="text-card-boxes bg-dark">
+          <div class="flex-container">
+            <div class="aboutus-icon">
+              <img
+                src="images/transaction.webp"
+                alt="Transaction protection icon"
+                height="80"
+              />
+            </div>
+            <div class="heading"><h5>Extra-secure transactions</h5></div>
+          </div>
+          <div class="aboutus-text">
+            <p>
+              We use 2-factor authentication to protect your account and
+              transactions. That means you — and only you — can get to your
+              money.
+            </p>
+            <a
+              href="csp/coming-soon.html"
+              target="_blank"
+              aria-label="Text-Link"
+              class="text-link"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <!--Card-Box 4-->
+        <div class="text-card-boxes bg-dark">
+          <div class="flex-container">
+            <div class="aboutus-icon">
+              <img
+                src="images//online-banking.webp"
+                alt="Bank-security icon"
+                height="80"
+              />
+            </div>
+            <div class="heading"><h5>Safeguarded with leading banks</h5></div>
+          </div>
+          <div class="aboutus-text">
+            <p>
+              We hold your money with established financial institutions, so
+              it’s separate from our own accounts and in our normal course of
+              business not accessible to our partners.
+            </p>
+            <a
+              href="csp/coming-soon.html"
+              target="_blank"
+              aria-label="Text-Link"
+              class="text-link"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <!--Card-Box 5-->
+        <div class="text-card-boxes bg-dark">
+          <div class="flex-container">
+            <div class="aboutus-icon">
+              <img
+                src="images/call-center.webp"
+                alt="Customer Support icon"
+                height="80"
+              />
+            </div>
+            <div class="heading"><h5>24/7 Support</h5></div>
+          </div>
+          <div class="aboutus-text">
+            <p>
+              We are committed to providing the best service and support to our
+              customers.
+            </p>
+            <a
+              href="csp/coming-soon.html"
+              target="_blank"
+              aria-label="Text-Link"
+              class="text-link"
+              >Read More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-top">
+          <div class="footer-company-name">
+            <img
+              id="footer-company-logo"
+              src="images/companylogo.webp"
+              alt="company logo"
+            />
+            <span class="footer-logo-name">MeXchange</span>
+          </div>
+          <div class="social-icons">
+            <a href="csp/coming-soon.html" aria-label="Facebook icon"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="csp/coming-soon.html"
+              target="_blank"
+              aria-label="Twitter icon"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="csp/coming-soon.html"
+              target="_blank"
+              aria-label="Instagram icon"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="csp/coming-soon.html"
+              target="_blank"
+              aria-label="Phone icon"
+              ><i class="fa fa-phone" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-rows-columns">
+          <!--Column 1-->
+          <ul class="footer-column">
+            <li class="footer-row_name">Company</li>
+            <li>
+              <a
+                href="csp/coming-soon.html"
+                target="_blank"
+                aria-label="Home Text"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="csp/coming-soon.html"
+                target="_blank"
+                aria-label="Get started Text"
+                >Get started</a
+              >
+            </li>
+            <li>
+              <a
+                href="csp/coming-soon.html"
+                target="_blank"
+                aria-label="About us Text"
+                >About us</a
+              >
+            </li>
+            <li>
+              <a
+                href="csp/coming-soon.html"
+                target="_blank"
+                aria-label="Contact us Text"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+          <!--Column 2-->
+          <ul class="footer-column">
+            <li class="footer-row_name">Services</li>
+            <li>
+              <a
+                href="csp/coming-soon.html"
+                target="_blank"
+                aria-label="Currency Converter Text"
+                >Currency Converter</a
+              >
+            </li>
+            <li>
+              <a
+                href="csp/coming-soon.html"
+                target="_blank"
+                aria-label="Compare Providers Text"
+                >Compare Providers</a
+              >
+            </li>
+            <li>
+              <a
+                href="csp/coming-soon.html"
+                target="_blank"
+                aria-label="View Currency Notes Text"
+                >View Currency Notes</a
+              >
+            </li>
+            <li>
+              <a
+                href="csp/coming-soon.html"
+                target="_blank"
+                aria-label="Money Transfer Text"
+                >Money Transfer</a
+              >
+            </li>
+          </ul>
+          <!--Column 3-->
+          <ul class="footer-column">
+            <li class="footer-row_name">Policies</li>
+            <li>
+              <a
+                href="csp/coming-soon.html"
+                target="_blank"
+                aria-label="Privacy Policy Text"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                href="csp/coming-soon.html"
+                target="_blank"
+                aria-label="Terms & Conditions Text"
+                >Terms & Conditions</a
+              >
+            </li>
+            <li>
+              <a
+                href="csp/coming-soon.html"
+                target="_blank"
+                aria-label="Latest News Text"
+                >Latest News</a
+              >
+            </li>
+            <li>
+              <a
+                href="csp/coming-soon.html"
+                target="_blank"
+                aria-label="Our Team"
+                >Our Team</a
+              >
+            </li>
+          </ul>
+          <ul class="footer-column footer-email-area">
+            <li class="footer-row_name">Subscribe</li>
+            <li><input type="text" placeholder="Enter your email" /></li>
+            <li><input type="button" value="Subscribe" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright-section">
+        <div class="copyright-info">
+          <span class="copyright_text"
+            >Copyright &#169; 2021
+            <a href="#" aria-label="MeXchange Text">MeXchange.</a>All rights
+            reserved</span
+          >
+          <span class="policy_terms"
+            ><a
+              href="csp/coming-soon.html"
+              target="_blank"
+              aria-label="Privacy policy Text"
+              >Privacy policy</a
+            >
+            <a
+              href="csp/coming-soon.html"
+              target="_blank"
+              aria-label="Terms & condition Text"
+              >Terms & condition</a
+            ></span
+          >
+        </div>
+      </div>
+    </footer>
+    <!--Supported Currencies-->
+    <script type="text/javascript" src="js/supported-currencies.js"></script>
+    <!--Competitor rates-->
+    <script type="text/javascript" src="js/competitor-rates.js"></script>
+    <!--Convertor.js-->
+    <script type="text/javascript" src="js/convertor.js"></script>
+    <!--ExchangeRates.js-->
+    <script type="text/javascript" src="js/rates.js"></script>
+    <!--Smoothscroll.js (animation on clicking scroll links)-->
+    <script>
+      let headerHeight =
+        document.getElementsByClassName("header")[0].offsetHeight;
+      let contentHeight =
+        document.getElementsByClassName("content")[0].offsetHeight;
+      let totalHeight = headerHeight + contentHeight;
+      let topBtn = document.getElementById("scrollTop");
+      let navRates = document.getElementById("nav-rates");
+      let navNotes = document.getElementById("nav-notes");
+      let navAbout = document.getElementById("nav-about");
+      let ratesHeight =
+        document.getElementsByClassName("content-2")[0].offsetHeight;
+      let notesHeight =
+        document.getElementsByClassName("content-3")[0].offsetHeight;
+      let helpIcon = document.getElementsByClassName("fa-question-circle")[0];
+
+      //Top button behavior
+      window.addEventListener("scroll", function () {
+        if (
+          document.body.scrollTop > totalHeight ||
+          document.documentElement.scrollTop > totalHeight
+        ) {
+          topBtn.style.opacity = "1";
+          topBtn.style.cursor = "pointer";
+        } else {
+          topBtn.style.opacity = "0";
+          topBtn.style.cursor = "default";
+        }
+      });
+
+      //ScrollTop button function
+      topBtn.addEventListener("click", function (ev) {
+        if (topBtn.style.opacity == 0) ev.preventDefault();
+        else {
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+      });
+
+      //navlink-rates
+      navRates.addEventListener("click", function () {
+        document.body.scrollTop = totalHeight; // For Safari
+        document.documentElement.scrollTop = totalHeight; // For Chrome, Firefox, IE and Opera
+      });
+
+      //navlink-notes
+      navNotes.addEventListener("click", function () {
+        document.body.scrollTop = ratesHeight + totalHeight; // For Safari
+        document.documentElement.scrollTop = ratesHeight + totalHeight; // For Chrome, Firefox, IE and Opera
+      });
+
+      //navlink-about
+      navAbout.addEventListener("click", function () {
+        document.body.scrollTop = notesHeight + ratesHeight + totalHeight; // For Safari
+        document.documentElement.scrollTop =
+          notesHeight + ratesHeight + totalHeight; // For Chrome, Firefox, IE and Opera
+      });
+    </script>
+    <!--Modal Popup for Country Notes-incomplete-->
+    <script type="text/javascript" src="js/banknotes-modal.js"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+    <script>
+      /* To Disable Inspect Element */
+      $(document).bind("contextmenu", function (e) {
+        e.preventDefault();
+      });
+
+      $(document).keydown(function (e) {
+        if (e.which === 123) {
+          return false;
+        }
+      });
+    </script>
+    <script>
+      document.onkeydown = function (e) {
+        if (event.keyCode == 123) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode == "E".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode == "S".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode == "H".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode == "A".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode == "F".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode == "E".charCodeAt(0)) {
+          return false;
+        }
+      };
+    </script>
+  </body>
+</html>

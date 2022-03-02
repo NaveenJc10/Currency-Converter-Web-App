@@ -1,0 +1,144 @@
+.content-3 {
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  background-image: linear-gradient(to top, #fbc2eb 0, #a6c1ee 100%);
+}
+.text-3 {
+  text-align: center;
+  color: #000;
+}
+.text-3 h1 {
+  font-size: 40pt;
+}
+.text-3 p {
+  font-family: "Noto Sans Display", sans-serif;
+  font-weight: 700;
+  font-size: 12pt;
+}
+#flag-list {
+  margin: 2em auto;
+  list-style: none;
+  width: 60em;
+  height: 28em;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 1px 1px 6px 1px;
+}
+#flag-list li {
+  position: relative;
+  width: 190px;
+  height: 450px;
+  float: left;
+  border-left: 1px solid #fff;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  transition: all 0.7s;
+  box-shadow: -2px 0 10px 2px;
+  border-color: #000;
+  border: none;
+}
+#flag-list span {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  font-family: Roboto, sans-serif;
+  color: #fff;
+  white-space: nowrap;
+  padding: 20px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.65) 0,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#flag-list img {
+  width: 800px;
+  height: 450px;
+}
+#flag-list:hover li {
+  width: 50px;
+  cursor: pointer;
+}
+#flag-list li:hover {
+  width: 750px;
+}
+#modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+}
+#modal__close-btn {
+  position: absolute;
+  top: 1em;
+  right: 2em;
+  display: flex;
+  padding: 0 0.5em;
+  color: #fff;
+  font-size: 1.4em;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+#modal__close-btn:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+#modal__close-btn i {
+  margin: 0.19em 0.6em 0 0;
+}
+#modal__close-btn p {
+  font-size: 1.3rem;
+  font-family: "Noto Sans Display", sans-serif;
+  font-weight: 500;
+}
+#modal__country-notes {
+  width: 500px;
+  height: 580px;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 4em;
+  left: 0;
+  right: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  animation-name: slidein;
+  animation-duration: 0.3s;
+}
+@keyframes slidein {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 65px;
+    opacity: 1;
+  }
+}
+#modal__img {
+  width: 100%;
+  height: 90%;
+  display: block;
+  margin: auto;
+}
+#modal__text {
+  height: 10%;
+  font-family: "Noto Sans Display", sans-serif;
+  font-size: 1.1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  line-height: 3rem;
+  letter-spacing: 1.5px;
+}
