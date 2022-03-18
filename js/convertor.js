@@ -43,7 +43,7 @@ function getExchangeRate() {
   ("" != amountValue && "0" != amountValue) ||
     ((input.value = "1"), (amountValue = 1)),
     (exchangeRateTxt.innerText = "Fetching latest rate...");
-  let url = `https://v6.exchangerate-api.com/v6/d7bc46ce2b7ea657c8af94d0/latest/${fromCurrency.value}`;
+  let url = `https://v6.exchangerate-api.com/v6/d6dd3adcca6afcdd3821e34f/latest/${fromCurrency.value}`;
   fetch(url)
     .then((response) => response.json())
     .then((result) => {

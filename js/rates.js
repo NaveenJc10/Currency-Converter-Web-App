@@ -54,7 +54,7 @@ function countryFlags2(element) {
 function getListings() {
   let bottomSection = document.querySelector(".bottom-section");
 
-  let url = `https://v6.exchangerate-api.com/v6/d7bc46ce2b7ea657c8af94d0/latest/${fromCurrency2.value}`;
+  let url = `https://v6.exchangerate-api.com/v6/d6dd3adcca6afcdd3821e34f/latest/${fromCurrency2.value}`;
   fetch(url)
     .then((response) => response.json())
     .then((result) => {
