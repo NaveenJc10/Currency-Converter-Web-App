@@ -3,7 +3,7 @@
 <br>
 
 
-# 💱 Currency-Converter-Web-App
+# Currency-Converter-Web-App
 
 A modern, responsive currency conversion web application that provides real-time exchange rates, rate comparisons, and visual references for global currencies.
 
